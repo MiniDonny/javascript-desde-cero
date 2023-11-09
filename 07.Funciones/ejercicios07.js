@@ -106,8 +106,12 @@ const personaMásJoven = (arr) => {
 // Crea una función que reciba una cadena de texto y devuelva un objeto con la cantidad de veces que aparece cada letra en la cadena.
 // IMPORTANTE -> la funcion debe llamarse 'contadorDeLetras'
 // Tu código:
-const contadorDeLetras = () => {
-
+const contadorDeLetras = (string) => {
+    let obj = {}
+    for (let i = 0; i < string.length; i++) {
+        obj[string[i]] ? obj[string[i]]++ : obj[string[i]] = 1
+    }
+    return obj
 }
 
 
@@ -116,16 +120,16 @@ const contadorDeLetras = () => {
 // Crea una función que reciba un array de objetos que tiene como propiedades "nombre" y "sueldo" y devuelva el objeto con el sueldo más alto.
 // IMPORTANTE -> la funcion debe llamarse 'sueldoMasAlto'
 // Tu código:
-const sueldoMasAlto = (objeto) => {
-    let nombres = objeto[0]
-    let sueldo = objeto[0].sueldo
-    for (let i = 0; i < objeto.length; i++) {
-        if (objeto[i].sueldo > sueldo) {
-            sueldo = objeto[i].sueldo
-            nombres = objeto[i]
+const sueldoMasAlto = (personal) => {
+    let obj = personal[0]
+    let sueldo = personal[0].sueldo
+    for (let i = 0; i < personal.length; i++) {
+        if(personal[i].sueldo > sueldo){
+            sueldo = personal[i].sueldo
+            obj = personal[i]
         }
     }
-    return objeto
+    return obj
 }
 
 
@@ -135,8 +139,14 @@ const sueldoMasAlto = (objeto) => {
 // y devuelva un nuevo array con los nombres de los estudiantes que obtuvieron una nota mayor o igual a 80.
 // IMPORTANTE -> la funcion debe llamarse 'aprobados'
 // Tu código:
-const aprobados = () => {
-
+const aprobados = (estudiantes) => {
+    let alumnosAprobados = []
+    for (let i = 0; i < estudiantes.length; i++) {
+        if(estudiantes[i].nota >= 80){
+            alumnosAprobados.push(estudiantes[i].nombre)
+        } 
+    }
+    return alumnosAprobados
 }
 
 
