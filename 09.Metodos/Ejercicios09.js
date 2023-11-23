@@ -22,7 +22,11 @@ function masImpuestos(array){
     // Ejemplo: {producto: 'Zapatillas Nike', nSerie: 1511440, precio: $1000}. Deberias devolver => {producto: 'Zapatillas Nike', nSerie: 1511440, precio: 1000, Impuestos: 100}
     // Usar metodo .map()
     // Tu codigo:
-    
+    return array.map(producto =>{
+        let imp = Math.trunc(producto.precio * 0.10)
+        producto['impuestos'] = imp
+        return producto
+    })
 }
 
 function NombresLargos(array){
@@ -38,13 +42,8 @@ function filtaradoPorCategoria(array, categoria){
     // Recibiras por porametros un array de objetos con peliculas de la siguiente manera: {titulo: 'Spiderman', Estreno: , Categoria:  }.
     // deberás usar metodo filter, para devolver un array con los nombres de las peliculas que sean de la categoria pedida.
     // Tu codigo:
-    let titulos = [];
-    for (let i = 0; i < array.length; i++) {
-        if (array[i].Categoria === categoria) {
-            titulos.push(array[i].titulo);
-        }
-    }
-    return titulos;
+    const pelis = array.filter(pelicula => pelicula.categoria == categoria)
+    return pelis.map(p => p.titulo)
 }
 
 function examenIngreso(array){
