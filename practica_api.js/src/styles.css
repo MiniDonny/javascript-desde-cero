@@ -1,0 +1,62 @@
+/*FONT LETTER*/
+@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap');
+
+/*GLOBALS*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hedvig Letters Serif', serif;
+}
+/*COLORS*/
+:root{
+    --bg-main: #2D3E40;
+    --second-bg-color: #387373;
+    --main:#93BFB7;
+    --color-letters: #E4F2E7;
+    --shadow: #97A6A0;
+}
+/*BODY*/
+body{
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-main);
+    justify-content: center;
+    align-items: center;
+}
+/*TITLE*/
+h1{
+    padding: 4rem;
+    color: var(--color-letters);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1 span{
+    color: var(--second-bg-color);
+}
+/*CONTAINER*/
+#contenedor{
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+/*CARD*/
+.carta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+    background: var(--main);
+    border: 5px solid var(--shadow);
+    border-radius: 2rem;
+}
+.carta:hover{
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
