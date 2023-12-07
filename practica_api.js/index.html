@@ -17,20 +17,41 @@
         <!--MAIN-->
         <main>
             <h1>POKEMON <span>API</span></h1>
-            <!--SECTION-->
+            <!--SECTION LOOCK UP-->
+            <section class="sections_inputs">
+
+                <!--SERCH-->
+                <div id="search">
+                    <label for="search">Look For</label>
+                    <input type="text" name="search" id="search">
+                </div>
+
+                <!--FILTER TO PAGES-->
+                <div class="filter_page">
+                    <label for="page">Page</label>
+                    <select name="page" id="page"></select>
+                </div>
+                <!--FILTER TO TYPES-->
+                <div class="filter_filter">
+                    <label for="filter">Filter</label>
+                    <select name="filter" id="filter">
+                </div>
+            </section>
+
+            <!--SECTION CONTAINER CARDS-->
             <section id="contenedor">
                 <!--
                 <div class="carta">
                     <h3 class="tittle"></h3>
                     <img src="" alt="">
-                    <p class="id_pokemon"></p>
+                    <p class="type_pokemon"></p>
                 </div>
                 -->
             </section>
         </main>
 
         <!--LINK JS-->
-        <script type="module" src="./src/main.mjs"></script>
+        <script type="module" src="./src/characters/serch.mjs"></script>
     </body>
 
 </html>
